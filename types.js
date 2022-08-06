@@ -1,6 +1,7 @@
 export class Sender {
-  constructor(ip, time) {
+  constructor(ip, date, time) {
     this.ip = ip
+    this.date = date
     this.time = time
   }
 }
