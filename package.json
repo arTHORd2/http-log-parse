@@ -1,0 +1,22 @@
+{
+  "name": "http-log-parse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arTHORd2/http-log-parse.git"
+  },
+  "author": "Arthur Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arTHORd2/http-log-parse/issues"
+  },
+  "homepage": "https://github.com/arTHORd2/http-log-parse#readme",
+  "devDependencies": {
+    "jasmine": "^4.3.0"
+  }
+}
