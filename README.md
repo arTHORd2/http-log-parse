@@ -27,6 +27,7 @@ Returns the URLs that appear most frequently in the log file. The number of URLs
 be specified as a query param `count`. If `count` is not specified, it will default
 to 3
 ### Running the tests
+Make sure that the server is running on `localhost:3000` before running the tests. Otherwise, the API tests will fail.
 ```
 npm test
 ```
@@ -67,5 +68,9 @@ The unit tests only cover one function, with mock input. Each `describe` block i
 ### Integration tests
 Integration tests will cover different behaviours that will require more than one function. They check whether the inputs and outputs of each function are compatible with each other.
 
+### API tests
+These tests directly call the API endpoints hosted on localhost:3000. These tests
+are end-to-end, and simulate the expected use-case of this project
+
 ## DevOps
-The file `.github/workflows/` outlines a Github Actions workflow that will build the app run tests whenever code is pushed to the master branch
+The file `.github/workflows/` outlines a Github Actions workflow that runs whenever code is pushed to the master branch. The YAML file will run `node app.js &`, which runs the API in the background on port 3000. The script then waits 1 second for the server to start before running the tests. Once the tests are finished, the script terminates the server.
