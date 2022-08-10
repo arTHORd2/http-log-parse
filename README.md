@@ -58,3 +58,14 @@ O(nk), which approaches O(n^2) as k increases.
 The given implementation will synchronously read in the entire file, then extract the data all at once. This may cause memory issues if the file is extremely large. 
 
 The alternative approach is to read and process the file line-by-line. This limits the amount of data being stored in memory at any given time. However, this also increases the amount of read operations to the file, which can become very slow. As stated in the assumptions, the choice was made to prioritise time over space.
+
+## Tests
+Tests have been implemented with the Jasmine library. This allows for behaviour-specific tests that ensure the code adheres to the specification. Jasmine tests are also more suited for JavaScript projects that don't require a DOM than other testing frameworks, like Jest or Mocha
+
+### Unit tests
+The unit tests only cover one function, with mock input. Each `describe` block is a function, and the `it()` blocks are different functionalities and edge-cases that should be managed
+### Integration tests
+Integration tests will cover different behaviours that will require more than one function. They check whether the inputs and outputs of each function are compatible with each other.
+
+## DevOps
+The file `.github/workflows/` outlines a Github Actions workflow that will build the app run tests whenever code is pushed to the master branch
