@@ -29,6 +29,6 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: node app.js &
-    - run: sleep 1
+    - run: sleep 1 # Give the app a second to start up before running tests
     - run: npm test
     - run: kill $(lsof -i:3000 -t)
